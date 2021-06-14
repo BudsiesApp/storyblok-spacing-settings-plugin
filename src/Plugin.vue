@@ -41,11 +41,13 @@
                   v-model="model.padding_left"
                   :class="{ '-invalid': !isValueValid(model.padding_left) }"
                 />
+
                 <input
                   type="text"
                   name="padding-right"
                   tabindex="6"
                   v-model="model.padding_right"
+                  :class="{ '-invalid': !isValueValid(model.padding_right) }"
                 />
               </div>
 

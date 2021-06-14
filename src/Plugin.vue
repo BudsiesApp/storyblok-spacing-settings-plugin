@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="spacing-settings-plugin">
     <div class="_margin">
       <div class="_inputs-group">
         <div class="_top-section">
@@ -158,22 +158,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.spacing-settings-plugin {
 ._margin,
 ._padding {
   position: relative;
-}
 
-._margin {
-  font-size: 0.9em;
-}
-
-._padding {
-  margin: 0.5em;
-}
-
-._margin ._legend,
-._padding ._legend {
+    ._legend {
   position: absolute;
   top: 0.5em;
   bottom: 1.7em;
@@ -183,20 +174,27 @@ export default {
   box-sizing: border-box;
   border: 1px solid #cacaca;
   z-index: 0;
-}
 
-._margin ._legend legend,
-._padding ._legend legend {
+      legend {
   font-size: 0.9em;
   margin: 0;
   margin-left: -1.8rem;
   padding: 0 0.1875rem;
   width: min-content;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
 }
 
-._margin ._legend legend::after,
-._padding ._legend legend::after {
-  display: none;
+  ._margin {
+    font-size: 0.9em;
+  }
+
+  ._padding {
+    margin: 0.5em;
 }
 
 ._inputs-group {
@@ -206,20 +204,20 @@ export default {
   align-items: stretch;
   position: relative;
   z-index: 1;
-}
 
-._inputs-group input {
+    input {
   flex-grow: 0;
   width: 4.2em;
   padding: 0.5em;
   text-align: center;
-}
 
-._inputs-group input.-invalid {
+      &.-invalid {
   background: #fff1f0;
   color: #d85030;
   border: 1px solid #d85030;
 }
+    }
+  }
 
 ._top-section,
 ._bottom-section {
@@ -233,9 +231,10 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
 
-._middle-section ._padding {
+    ._padding {
   flex-grow: 1;
+}
+  }
 }
 </style>

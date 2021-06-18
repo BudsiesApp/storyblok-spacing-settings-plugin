@@ -1,6 +1,6 @@
-# Storyblok Field-Type
+# Storyblok Spacing Settings Field-Type Plugin
 
-> A Storyblok Field-Type Plugin Starter Project
+> Allows to specify padding and margin values.
 
 ## Project setup
 ```
